@@ -1,0 +1,16 @@
+Очистить микроконтроллер
+
+avrdude -v -p m328p -c avrisp -P com4 -b 19200 -e
+
+
+
+Зашить *.hex файл
+
+avrdude -v -p m328p -c avrisp -P com4 -b 19200 -D -U flash:w:"filename.hex":i
+
+
+
+
+filename.hex - cвой файл, должеть быть в этой же папке
+Номер СOM-порта должен быть свой
+m328p - это микроконтроллер ATmega328p, записать свой при необходимости
